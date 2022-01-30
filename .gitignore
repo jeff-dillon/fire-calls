@@ -1,3 +1,8 @@
+# project specfic files
+clean_calls_2.py
+analyze_calls_2.py
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

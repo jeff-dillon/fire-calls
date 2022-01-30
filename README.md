@@ -13,9 +13,9 @@ How often are fire trucks called out for fires?
 | ------ | --------|
 | Source | csv file from Louisville Open Data | 
 | Columns | AGENCY NAME – Name of the fire protection agency that has jurisdiction for the event.|
-| | DATE – Date the event occurred.|
-| | CREATE – Time the event was entered into the 911 CAD system. |
-| | DISPATCH – Time dispatchers notified responders of event. |
+| |DATE – Date the event occurred.|
+| |CREATE – Time the event was entered into the 911 CAD system. |
+| |DISPATCH – Time dispatchers notified responders of event. |
 | |ENROUTE - Time the first unit went responding to event. |
 | |ARRIVE - Time the first unit called on scene to an event.|
 | |CLEAR - Time last unit left scene and the event was closed.|
@@ -26,7 +26,6 @@ How often are fire trucks called out for fires?
 | |FD EVENT NUMBER – Unique number for event assigned to the agency that has jurisdiction.|
 | |ZIP CODE – The zip code in which the event occurred. |
 | Records | 158898 items |
-| Data Issues | Blank values in DISPATCH, ENROUTE, ARRIVE   | 
 
 
 ### Sample Data
@@ -46,21 +45,14 @@ How often are fire trucks called out for fires?
 
 
 ### Data Issues
-1. issue 1
-1. issue 2
+1. issue
+1. issue
+1. issue
 
-### Clean Data Format
+### Target Clean Data Format
 
 
 Call Data by Event Category
-`
-    {
-        'FIRE' : 1234,
-        'MEDICAL': 234
-    }
-`
-
-Call Data by Priority
 `
     {
         'FIRE' : 1234,
@@ -84,16 +76,10 @@ Call Data by Zip
     }
 `
 
-
-### Project Setup
-
-1. Clone repo `git clone <repo url>`
-
-### Cleaning Script
-1. create cleaning script
-1. load raw the data using csv module
-1. write the clean data using the json module
-
-## TODO
-- [ ] Analyze the data
-- [ ] Visualize the data
+Call Data by Priority
+`
+    {
+        'FIRE' : 1234,
+        'MEDICAL': 234
+    }
+`

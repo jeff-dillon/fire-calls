@@ -55,7 +55,7 @@ Review the sample data (viewing the table on Github is the easiest way) and iden
 1. issue
 
 ### Mentor Demo: cleaning and summarizing by category
-As part fo the data discovery, I have written a simple script to clean the data and save a summary data file that could be used for visualization or analysis.
+The `clean_calls.py` script cleans the data and save a summary data file that could be used for visualization or analysis.
 
 I have summarized the data by Event Category and saved the summary data as a json file with the following format:
 
@@ -68,7 +68,7 @@ Call Data by Event Category
 `
 ### Student Task: Clean and summarize data
 
-Modify the script to summarize the data by call Priority and save the summary data as a json file.
+Modify the `clean_calls.py` script to summarize the data by call Priority and save the summary data as a json file.
 
 Call Data by Priority
 `
@@ -77,11 +77,19 @@ Call Data by Priority
         '2' : 234
     }
 `
+### Mentor Demo: Analyze data
+The `analyze_calls.py` script allows a user to interact with the clean data. The user can choose from a list of categories and see the total number of calls for the selected categoy.
 
+`There were 15005 calls in the FIRE category`
+
+### Student Task: Analyze data
+Modify the `analyze_calls.py` script to prompt the user for a priority between 0 and 9 and display the number of calls for the selected priority.
+
+`There were 9058 calls with priority 1.`
 
 ### Student Task: Clean and summarize data
 
-Modify the script again to summarize the data by Zip Code with totals for all calls, fire calls, and other calls. 
+Modify the `clean_calls.py` script again to summarize the data by Zip Code with totals for all calls, fire calls, and other calls. 
 
 Remember that the Zip Code data needs some cleaning to deal with empty values. In this case, let's replace the empty Zip Code values with the string "Unknown".
 
@@ -105,4 +113,9 @@ Call Data by Zip
         }
     }
 `
+
+### Student Task: Analyze the zip code data
+Modify the `analyze_calls.py` script to prompt the user for a zip code and then display the % of calls in the "FIRE" category.
+
+`8.0% of fire department calls in zip code 40203 are for fires.`
 

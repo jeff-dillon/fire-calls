@@ -8,10 +8,12 @@ How often are fire trucks called out for fires?
 
 [Louisville/Jefferson County Fire Districts calls for service](https://data.louisvilleky.gov/dataset/louisvillejefferson-county-fire-districts-calls-service)
 
+Calls for service broken down by Fire Districts which includes but not limited to Fire and Medical Emergencies.
+
+
 ### File Details
-| | |
+|Dimension | Description |
 | ------ | --------|
-| Source | csv file from Louisville Open Data | 
 | Columns | AGENCY NAME – Name of the fire protection agency that has jurisdiction for the event.|
 | |DATE – Date the event occurred.|
 | |CREATE – Time the event was entered into the 911 CAD system. |
@@ -79,7 +81,7 @@ Call Data by Zip
 Call Data by Priority
 `
     {
-        'FIRE' : 1234,
-        'MEDICAL': 234
+        '1' : 1234,
+        '2': 234
     }
 `

@@ -45,14 +45,19 @@ Calls for service broken down by Fire Districts which includes but not limited t
 |Middletown FD|01/01/2020|00:55:51|00:56:02|00:58:47|01:02:47|02:29:05|0000|2500 BLOCK OF EVERGREEN RD|ACCIDENT--Injury Accident|2|F9919005687|40223|
 |Pleasure Ridge Park FD|01/01/2020|01:11:05|01:11:26|01:13:10|01:19:38|01:35:31|0100|7800 BLOCK OF BRAMBLE LN|MEDICAL--MEDICAL - MED_CALL|7|F2220000001| |
 
+### Mentor Demo: Identifying Data Issues
+There are several issues with the sample data that could make the analysis of the data more difficult. 
+1. The event type column contains multiple pieces of information. It contains a category and a sub-category separated by "--".
+1. Minor issue - the column titles use different formats - snake case and words with spaces. It would be ideal to have the clean data use consistent formats.
 
-### Data Issues
-1. issue
-1. issue
+### Student Task: Identifying Data Issues
+Review the sample data (viewing the table on Github is the easiest way) and identify at least 1 more issue with the sample data.
 1. issue
 
-### Target Clean Data Format
+### Mentor Demo: cleaning and summarizing by category
+As part fo the data discovery, I have written a simple script to clean the data and save a summary data file that could be used for visualization or analysis.
 
+I have summarized the data by Event Category and saved the summary data as a json file with the following format:
 
 Call Data by Event Category
 `
@@ -61,6 +66,24 @@ Call Data by Event Category
         'MEDICAL': 234
     }
 `
+### Student Task: Clean and summarize data
+
+Modify the script to summarize the data by call Priority and save the summary data as a json file.
+
+Call Data by Priority
+`
+    {
+        '1' : 1234,
+        '2' : 234
+    }
+`
+
+
+### Student Task: Clean and summarize data
+
+Modify the script again to summarize the data by Zip Code with totals for all calls, fire calls, and other calls. 
+
+Remember that the Zip Code data needs some cleaning to deal with empty values. In this case, let's replace the empty Zip Code values with the string "Unknown".
 
 Call Data by Zip
 ` 
@@ -74,14 +97,12 @@ Call Data by Zip
             'CALL_TOTAL' : 21,
             'FIRE_TOTAL' : 7,
             'OTHER_TOTAL' : 14
+        },
+        'Unknown' = {
+            'CALL_TOTAL' : 28,
+            'FIRE_TOTAL' : 14,
+            'OTHER_TOTAL' : 14
         }
     }
 `
 
-Call Data by Priority
-`
-    {
-        '1' : 1234,
-        '2': 234
-    }
-`

@@ -8,7 +8,8 @@ with open(CATEGORY_FILE_PATH) as file:
     print(*category_data.keys(), sep='\n')
     category = input("Enter a category:")
     if category in category_data:
-        print(f'There were {category_data[category]} calls in the {category} category')
+        print(f'There were {category_data[category]} calls \
+                in the {category} category')
     else:
         print('Category not found.')
 

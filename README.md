@@ -1,14 +1,17 @@
 # fire-calls
-Python Data Loading Demo
+Python Data Cleaning Demo
 
 ## The Question
-How often are fire trucks called out for fires?
+
+How often are fire trucks called out for fires compared to other reasons?
 
 ## The Data Source
 
+Louisville publishes data on Fire Department emergency calls.
+
 [Louisville/Jefferson County Fire Districts calls for service](https://data.louisvilleky.gov/dataset/louisvillejefferson-county-fire-districts-calls-service)
 
-Calls for service broken down by Fire Districts which includes but not limited to Fire and Medical Emergencies.
+This file includes calls for service over a rollling 24 month period broken down by Fire Districts which includes but not limited to Fire and Medical Emergencies.
 
 
 ### File Details
@@ -46,15 +49,19 @@ Calls for service broken down by Fire Districts which includes but not limited t
 |Pleasure Ridge Park FD|01/01/2020|01:11:05|01:11:26|01:13:10|01:19:38|01:35:31|0100|7800 BLOCK OF BRAMBLE LN|MEDICAL--MEDICAL - MED_CALL|7|F2220000001| |
 
 ### Mentor Demo: Identifying Data Issues
+
 There are several issues with the sample data that could make the analysis of the data more difficult. 
+
 1. The event type column contains multiple pieces of information. It contains a category and a sub-category separated by "--".
 1. Minor issue - the column titles use different formats - snake case and words with spaces. It would be ideal to have the clean data use consistent formats.
 
 ### Student Task: Identifying Data Issues
+
 Review the sample data (viewing the table on Github is the easiest way) and identify at least 1 more issue with the sample data.
 1. issue
 
 ### Mentor Demo: cleaning and summarizing by category
+
 The `clean_calls.py` script cleans the data and save a summary data file that could be used for visualization or analysis.
 
 I have summarized the data by Event Category and saved the summary data as a json file with the following format:
@@ -78,11 +85,13 @@ Call Data by Priority
     }
 `
 ### Mentor Demo: Analyze data
+
 The `analyze_calls.py` script allows a user to interact with the clean data. The user can choose from a list of categories and see the total number of calls for the selected categoy.
 
 `There were 15005 calls in the FIRE category`
 
 ### Student Task: Analyze data
+
 Modify the `analyze_calls.py` script to prompt the user for a priority between 0 and 9 and display the number of calls for the selected priority.
 
 `There were 9058 calls with priority 1.`
